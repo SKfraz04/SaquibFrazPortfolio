@@ -9,7 +9,7 @@ import { projects } from "@/data/portfolio";
 import { ExternalLink, Github, Globe } from "lucide-react";
 import Link from "next/link";
 
-function ProjectCard({ project: any, index }) {
+function ProjectCard({ project, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

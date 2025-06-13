@@ -9,25 +9,7 @@ import { projects } from "@/data/portfolio";
 import { ExternalLink, Github, Globe } from "lucide-react";
 import Link from "next/link";
 
-type ProjectCategory = "all" | "blockchain" | "web";
-
-type Project = {
-  name: string;
-  description: string;
-  chain?: string;
-  tech: string[];
-  image: string;
-  live?: string;
-  github?: string;
-  category: "blockchain" | "web";
-}
-
-type ProjectCardProps = {
-  project: Project;
-  index: number;
-}
-
-function ProjectCard({ project, index }: ProjectCardProps) {
+function ProjectCard({ project, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -112,7 +94,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
 }
 
 export default function ProjectsSection() {
-  const [activeCategory, setActiveCategory] = useState<ProjectCategory>("all");
+  const [activeCategory, setActiveCategory] = useState("all");
 
   const allProjects = [...projects.blockchain, ...projects.web];
   const filteredProjects = activeCategory === "all" 

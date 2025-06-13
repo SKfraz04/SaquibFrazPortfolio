@@ -9,7 +9,19 @@ import { projects } from "@/data/portfolio";
 import { ExternalLink, Github, Globe } from "lucide-react";
 import Link from "next/link";
 
-function ProjectCard({ project, index }) {
+interface ProjectCardProps {
+  project: {
+    name: string;
+    chain?: string;
+    category: string;
+    description: string;
+    tech: string[];
+    live?: string;
+    github?: string;
+  };
+  index: number;
+}
+function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -46,7 +58,7 @@ function ProjectCard({ project, index }) {
 
           {/* Tech Stack */}
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.tech.slice(0, 3).map((tech) => (
+            {project.tech.slice(0, 3).map((tech: string) => (
               <Badge key={tech} variant="secondary" className="text-xs">
                 {tech}
               </Badge>

@@ -11,8 +11,19 @@ import Link from "next/link";
 
 type ProjectCategory = "all" | "blockchain" | "web";
 
-interface ProjectCardProps {
-  project: any;
+type Project = {
+  name: string;
+  description: string;
+  chain?: string;
+  tech: string[];
+  image: string;
+  live?: string;
+  github?: string;
+  category: "blockchain" | "web";
+}
+
+type ProjectCardProps = {
+  project: Project;
   index: number;
 }
 
@@ -53,7 +64,7 @@ function ProjectCard({ project, index }: ProjectCardProps) {
 
           {/* Tech Stack */}
           <div className="flex flex-wrap gap-2 mb-4">
-            {project.tech.slice(0, 3).map((tech: string) => (
+            {project.tech.slice(0, 3).map((tech) => (
               <Badge key={tech} variant="secondary" className="text-xs">
                 {tech}
               </Badge>

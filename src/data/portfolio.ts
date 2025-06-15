@@ -12,37 +12,64 @@ export const personalInfo = {
   }
 };
 
+import { 
+  SiReact, 
+  SiNextdotjs, 
+  SiTypescript, 
+  SiJavascript, 
+  SiVuedotjs, 
+  SiTailwindcss, 
+  SiRedux,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiFirebase,
+  SiSolidity,
+  SiEthereum,
+  SiWeb3Dotjs,
+  SiGit,
+  SiGithub,
+} from "react-icons/si";
+import { 
+  FaRocket, 
+  FaCode, 
+  FaRobot, 
+  FaPlug, 
+  FaDroplet,
+  FaFileCode
+} from "react-icons/fa6";
+
 export const skills = {
   frontend: [
-    { name: "React.js", level: 95, icon: "⚛️" },
-    { name: "Next.js", level: 90, icon: "▲" },
-    { name: "TypeScript", level: 85, icon: "📘" },
-    { name: "JavaScript", level: 95, icon: "📜" },
-    { name: "Vue.js", level: 70, icon: "💚" },
-    { name: "Tailwind CSS", level: 90, icon: "🎨" },
-    { name: "Redux/Redux Toolkit", level: 85, icon: "🔄" },
+    { name: "React.js", level: 95, icon: SiReact },
+    { name: "Next.js", level: 90, icon: SiNextdotjs },
+    { name: "TypeScript", level: 85, icon: SiTypescript },
+    { name: "JavaScript", level: 95, icon: SiJavascript },
+    { name: "Vue.js", level: 70, icon: SiVuedotjs },
+    { name: "Tailwind CSS", level: 90, icon: SiTailwindcss },
+    { name: "Redux/Redux Toolkit", level: 85, icon: SiRedux },
   ],
   backend: [
-    { name: "Node.js", level: 85, icon: "🟢" },
-    { name: "Express.js", level: 85, icon: "⚡" },
-    { name: "MongoDB", level: 80, icon: "🍃" },
-    { name: "Firebase", level: 75, icon: "🔥" },
-    { name: "RESTful APIs", level: 90, icon: "🔌" },
+    { name: "Node.js", level: 85, icon: SiNodedotjs },
+    { name: "Express.js", level: 85, icon: SiExpress },
+    { name: "MongoDB", level: 80, icon: SiMongodb },
+    { name: "Firebase", level: 75, icon: SiFirebase },
+    { name: "RESTful APIs", level: 90, icon: FaPlug },
   ],
   blockchain: [
-    { name: "Solidity", level: 80, icon: "💎" },
-    { name: "Ethers.js", level: 85, icon: "🔷" },
-    { name: "Web3.js", level: 85, icon: "🌐" },
-    { name: "Ethereum", level: 80, icon: "⟠" },
-    { name: "Thirdweb", level: 75, icon: "🚀" },
-    { name: "SUI", level: 70, icon: "💧" },
+    { name: "Solidity", level: 80, icon: SiSolidity },
+    { name: "Ethers.js", level: 85, icon: SiEthereum },
+    { name: "Web3.js", level: 85, icon: SiWeb3Dotjs },
+    { name: "Ethereum", level: 80, icon: SiEthereum },
+    { name: "Thirdweb", level: 75, icon: FaRocket },
+    { name: "SUI", level: 70, icon: FaDroplet },
   ],
   tools: [
-    { name: "Git", level: 90, icon: "📦" },
-    { name: "GitHub", level: 90, icon: "🐙" },
-    { name: "Cursor", level: 85, icon: "💻" },
-    { name: "Copilot", level: 80, icon: "🤖" },
-    { name: "VS Code", level: 95, icon: "📝" },
+    { name: "Git", level: 90, icon: SiGit },
+    { name: "GitHub", level: 90, icon: SiGithub },
+    { name: "Cursor", level: 85, icon: FaCode },
+    { name: "Copilot", level: 80, icon: FaRobot },
+    { name: "VS Code", level: 95, icon: FaFileCode },
   ]
 };
 

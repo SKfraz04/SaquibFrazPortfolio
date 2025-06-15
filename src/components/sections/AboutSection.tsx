@@ -7,11 +7,13 @@ import { personalInfo, skills, education } from "@/data/portfolio";
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
 interface SkillItemProps {
-  skill: { name: string; level: number; icon: string };
+  skill: { name: string; level: number; icon: React.ComponentType<{ className?: string }> };
   index: number;
 }
 
 function SkillItem({ skill, index }: SkillItemProps) {
+  const IconComponent = skill.icon;
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -23,7 +25,7 @@ function SkillItem({ skill, index }: SkillItemProps) {
       <Card className="p-4 h-full glass-dark border-primary-600/20 hover:border-primary-400/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
-            <span className="text-2xl">{skill.icon}</span>
+            <IconComponent className="text-2xl text-primary-400" />
             <h4 className="font-medium text-sm">{skill.name}</h4>
           </div>
           <Badge variant="secondary" className="text-xs">
